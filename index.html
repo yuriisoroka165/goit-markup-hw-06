@@ -347,7 +347,8 @@
                 <p class="footer-social-title">Приєднуйтесь</p>
                 <ul class="footer-social-list list">
                     <li class="footer-social-item">
-                        <a class="footer-social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-social-link" href="https://instagram.com/" target="_blank"
+                            rel="noopener noreferrer">
                             <svg class="footer-social-link-icon">
                                 <use href="./images/icons.svg#icon-instagram"></use>
                             </svg>
@@ -361,14 +362,16 @@
                         </a>
                     </li>
                     <li class="footer-social-item">
-                        <a class="footer-social-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-social-link" href="https://facebook.com/" target="_blank"
+                            rel="noopener noreferrer">
                             <svg class="footer-social-link-icon">
                                 <use href="./images/icons.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="footer-social-item">
-                        <a class="footer-social-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-social-link" href="https://linkedin.com/" target="_blank"
+                            rel="noopener noreferrer">
                             <svg class="footer-social-link-icon">
                                 <use href="./images/icons.svg#icon-linkedin"></use>
                             </svg>
@@ -376,9 +379,22 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-subscribe-form-container">
+                <p class="subscribe-form-label">Підпишіться на розсилку</p>
+                <form class="footer-subscribe-form">
+                    <div class="subscribe-form-field">
+                        <input class="subscribe-form-input" type="email" id="email" placeholder="E-mail">
+                    </div>
+                    <button class="subscribe-form-button" type="submit">
+                        Підписатися
+                        <svg class="subscribe-button-icon">
+                            <use href="./images/icons.svg#send_icon"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
-
     <div class="modal-window-backdrop is-hidden" data-modal>
         <div class="modal-window">
             <button class="modal-close-button" data-modal-close>
@@ -395,15 +411,13 @@
                         <use href="./images/icons.svg#person_icon"></use>
                     </svg>
                 </div>
-
                 <div class="form-field">
                     <label for="phone">Телефон</label>
                     <input class="form-input" type="tel" name="phone" id="phone">
                     <svg class="input-field-icon">
                         <use href="./images/icons.svg#phone_icon"></use>
                     </svg>
-                </div>
-                
+                </div>        
                 <div class="form-field">
                     <label for="email">Пошта</label>
                     <input class="form-input" type="email" name="email" id="email">
@@ -411,23 +425,19 @@
                         <use href="./images/icons.svg#email_icon"></use>
                     </svg>
                 </div>
-
                 <div class="form-field">
                     <label for="comment">Коментар</label>
                     <textarea class="form-textarea" name="comment" rows="5" placeholder="Введіть текст" id="comment"></textarea>
                 </div>
-
                 <label class="terms-label">
                     <input class="terms-checkbox" type="checkbox" name="accept-terms" value="checked">
                     <span class="terms-of-use-icon"></span>
                     Погоджуюся з розсилкою та приймаю <a href="#" class="terms-of-use-decoration">Умови договору</a>
                 </label>
-
                 <button class="form-button" type="submit">Відправити</button>
             </form>
         </div>
     </div>
-
     <script src="./js/modal.js"></script>
 </body>
 </html>
