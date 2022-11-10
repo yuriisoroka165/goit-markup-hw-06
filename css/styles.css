@@ -28,10 +28,14 @@
     --footer-contacts-hove-focus-color: #2196f3;
     --footer-social-link-bg-color: rgba(255, 255, 255, 0.1);
     --global-white-color: #ffffff;
+    --global-sky-color: #2196f3;
+    --global-black-color: #000000;
     --social-clients-links-hover-color: #2196f3;
     --modal-window-backdrop-color: rgba(0, 0, 0, 0.2);
     --global-transition-duration: 250ms;
-    --glolnal-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --global-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --form-placeholder-color: rgba(117, 117, 117, 0.5);
+    --form-border-color: rgba(33, 33, 33, 0.2);
 }
 
 html {
@@ -151,7 +155,7 @@ img {
     /* css перехід */
     transition-property: color;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .header-navigation-email-icon {
@@ -180,7 +184,7 @@ img {
     /* css перехід */
     transition-property: color;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .header-navigation-link:hover,
@@ -207,7 +211,7 @@ img {
     /* css перехід */
     transition-property: opacity;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .header-navigation-link:hover::after,
@@ -284,13 +288,13 @@ img {
     border: none;
     border-radius: 4px;
     /* css перехід */
-    transition-property: background;
+    transition-property: background-color;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .hero-button:active {
-    background: var(--hero-button-background-active-color);
+    background-color: var(--hero-button-background-active-color);
 }
 
 /* ##################### Start Modal window #################### */
@@ -307,7 +311,7 @@ img {
     /* css перехід */
     transition-property: opacity;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
     z-index: 3;
 }
 
@@ -327,7 +331,7 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 8px;
+    /* padding: 8px; */
     transform: translate(-50%, -50%) scale(1);
     min-width: 528px;
     min-height: 581px;
@@ -335,7 +339,7 @@ img {
     background-color: var(--global-white-color);
     transition-property: transform;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .modal-close-icon {
@@ -349,11 +353,154 @@ img {
     height: 30px;
     display: flex;
     align-items: center;
+    margin-top: 8px;
+    margin-right: 8px;
     margin-left: auto;
     background-color: var(--global-white-color);
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+}
+
+.modal-close-button:hover .modal-close-icon {
+    fill: var(--header-navigation-link-hover-color);
+}
+
+.form-header {
+    width: 448px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    color: var(--header-navigation-link-color);
+}
+
+.form {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--header-contacts-color);
+}
+
+.form-input {
+    margin: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    padding-right: 12px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+}
+
+.input-field-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+.form-textarea {
+    resize: none;
+    padding: 16px 12px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+}
+
+.form-textarea::placeholder {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: var(--form-placeholder-color);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--global-sky-color);
+}
+
+.form-input:focus ~ .input-field-icon {
+    fill: var(--global-sky-color);
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--global-sky-color);
+}
+
+.terms-checkbox {
+    appearance: none;
+}
+
+.terms-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    color: var(--company-worker-position-color);
+}
+
+.terms-of-use-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid var(--global-black-color);
+    border-radius: 2px;
+}
+
+.terms-checkbox:checked + .terms-of-use-icon {
+    background-color: var(--global-sky-color);
+    background-image: url('../images/icons.svg#check_icon');
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--global-sky-color);
+}
+
+.terms-of-use-decoration {
+    margin-left: 4px;
+    color: var(--header-current-color);
+}
+
+.form-button {
+    background: var(--hero-button-background-active-color);
+    padding: 10px 52px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: calc(30 / 16);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    color: var(--global-white-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ##################### End Modal window #################### */
@@ -510,7 +657,7 @@ img {
     /* css перехід */
     transition-property: color, background-color;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .social-link-icon {
@@ -547,7 +694,7 @@ img {
     /* css перехід */
     transition-property: color, border;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .client-icon {
@@ -605,7 +752,7 @@ img {
     /* css перехід */
     transition-property: background, color, box-shadow;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .projects-filter-button:hover,
@@ -636,7 +783,7 @@ img {
     /* css перехід */
     transition-property: box-shadow;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .project-link:hover,
@@ -669,7 +816,7 @@ img {
     
     transition-property: opacity;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .project-link:hover .project-description,
@@ -704,7 +851,7 @@ img {
     transform: translateY(100%);
     transition-property: transform;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .project-description {
@@ -722,7 +869,7 @@ img {
     transform: translateY(100%);
     transition-property: transform;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .project-description > p {
@@ -807,7 +954,7 @@ img {
     /* css перехід */
     transition-property: color;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .footer-contact:hover,
@@ -857,7 +1004,7 @@ img {
     /* css перехід */
     transition-property: background-color;
     transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--glolnal-transition-timing-function);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .footer-social-link:hover,
