@@ -1,36 +1,20 @@
 :root {
-    --body-text-color: #212121;
-    --header-navigation-link-hover-color: #2196f3;
-    --site-logo-color: #000000;
-    --header-contacts-color: #757575;
-    --header-navigation-link-color: #212121;
-    --header-current-color: #2196f3;
+    --global-lightblack-color: #757575;
     --header-border-color: #ececec;
-    --hero-button-background-color: #2196f3;
     --hero-button-background-active-color: #188ce8;
     --skill-icon-backgruond: #f5f4fa;
-    --skill-text-color: #757575;
     --company-team-background-color: #f5f4fa;
-    --company-works-title-color: #212121;
-    --company-worker-name-color: #212121;
-    --company-worker-position-color: #757575;
     --social-icons-fill: #afb1b8;
     --projects-filter-button-background: #f5f4fa;
-    --projects-filter-button-hover-background-color: #2196f3;
-    --projects-filter-button-text-color: #212121;
-    --projects-link-color: #212121;
-    --project-title-color: #212121;
-    --projects-type-color: #757575;
     --projects-item-border-color: #eeeeee;
     --project-description-background: rgba(33, 150, 243, 0.9);
     --hero-footer-background-color: #2f303a;
     --footer-contacts-color: rgba(255, 255, 255, 0.6);
-    --footer-contacts-hove-focus-color: #2196f3;
     --footer-social-link-bg-color: rgba(255, 255, 255, 0.1);
     --global-white-color: #ffffff;
     --global-sky-color: #2196f3;
     --global-black-color: #000000;
-    --social-clients-links-hover-color: #2196f3;
+    --global-blackgray-color: #212121;
     --modal-window-backdrop-color: rgba(0, 0, 0, 0.2);
     --global-transition-duration: 250ms;
     --global-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,7 +32,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-    color: var(--body-text-color);
+    color: var(--global-blackgray-color);
 }
 
 h1,
@@ -108,11 +92,11 @@ img {
     font-weight: 700;
     line-height: 1.1923;
     text-decoration: none;
-    color: var(--site-logo-color);
+    color: var(--global-black-color);
 }
 
 .site-logo-design {
-    color: var(--header-navigation-link-hover-color);
+    color: var(--global-sky-color);
 }
 
 .header-nav {
@@ -151,7 +135,7 @@ img {
     line-height: 1.1428;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: var(--header-navigation-link-color);
+    color: var(--global-blackgray-color);
     /* css перехід */
     transition-property: color;
     transition-duration: var(--global-transition-duration);
@@ -180,7 +164,7 @@ img {
     line-height: 1.1428;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: var(--header-contacts-color);
+    color: var(--global-lightblack-color);
     /* css перехід */
     transition-property: color;
     transition-duration: var(--global-transition-duration);
@@ -193,7 +177,7 @@ img {
 .header-navigation-link:focus,
 .header-navigation-email:focus,
 .header-navigation-phone:focus {
-    color: var(--header-navigation-link-hover-color);
+    color: var(--global-sky-color);
 }
 
 .current::after,
@@ -205,7 +189,7 @@ img {
     display: block;
     min-width: 100%;
     height: 4px;
-    background-color: var(--header-navigation-link-hover-color);
+    background-color: var(--global-sky-color);
     opacity: 0;
     border-radius: 2px;
     /* css перехід */
@@ -222,18 +206,8 @@ img {
 .current,
 .current::after {
     opacity: 1;
-    color: var(--header-current-color);
+    color: var(--global-sky-color);
 }
-/* це не підійде тому що бордер не анімується */
-/* .current::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    min-width: 100%;
-    border-bottom: 4px solid var(--header-navigation-link-hover-color);
-    border-radius: 2px;
-} */
 
 /* ################## End header #################### */
 
@@ -254,7 +228,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: var(--body-text-color);
+    background-color: var(--global-blackgray-color);
 }
 
 .hero-title {
@@ -273,7 +247,7 @@ img {
 }
 
 .hero-button {
-    background: var(--hero-button-background-color);
+    background: var(--global-sky-color);
     padding: 10px 32px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -363,7 +337,7 @@ img {
 }
 
 .modal-close-button:hover .modal-close-icon {
-    fill: var(--header-navigation-link-hover-color);
+    fill: var(--global-sky-color);
 }
 
 .form-header {
@@ -375,7 +349,7 @@ img {
     font-size: 20px;
     line-height: calc(23 / 20);
     text-align: center;
-    color: var(--header-navigation-link-color);
+    color: var(--global-blackgray-color);
 }
 
 .form {
@@ -396,7 +370,7 @@ img {
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
-    color: var(--header-contacts-color);
+    color: var(--global-lightblack-color);
 }
 
 .form-input {
@@ -407,6 +381,9 @@ img {
     padding-right: 12px;
     border: 1px solid var(--form-border-color);
     border-radius: 4px;
+    transition-property: border-color;
+    transition-duration: var(--global-transition-duration);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .input-field-icon {
@@ -415,6 +392,9 @@ img {
     left: 12px;
     width: 18px;
     height: 18px;
+    transition-property: fill;
+    transition-duration: var(--global-transition-duration);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .form-textarea {
@@ -456,7 +436,7 @@ img {
     margin-bottom: 30px;
     font-size: 14px;
     line-height: calc(24 / 14);
-    color: var(--company-worker-position-color);
+    color: var(--global-lightblack-color);
 }
 
 .terms-of-use-icon {
@@ -470,7 +450,7 @@ img {
 
 .terms-checkbox:checked + .terms-of-use-icon {
     background-color: var(--global-sky-color);
-    background-image: url('../images/icons.svg#check_icon');
+    background-image: url("../images/icons.svg#check_icon");
     background-size: contain;
     background-origin: border-box;
     border-color: var(--global-sky-color);
@@ -478,7 +458,7 @@ img {
 
 .terms-of-use-decoration {
     margin-left: 4px;
-    color: var(--header-current-color);
+    color: var(--global-sky-color);
 }
 
 .form-button {
@@ -544,7 +524,7 @@ img {
     font-style: normal;
     font-weight: 400;
     line-height: 1.7142;
-    color: var(--skill-text-color);
+    color: var(--global-lightblack-color);
 }
 
 .company-works-section {
@@ -590,7 +570,7 @@ img {
     font-size: 36px;
     line-height: 1.1666;
     text-align: center;
-    color: var(--company-works-title-color);
+    color: var(--global-blackgray-color);
 }
 
 .company-team {
@@ -625,7 +605,7 @@ img {
     font-weight: 500;
     line-height: 1.1875;
     text-align: center;
-    color: var(--company-worker-name-color);
+    color: var(--global-blackgray-color);
 }
 
 .company-worker-position {
@@ -633,7 +613,7 @@ img {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: var(--company-worker-position-color);
+    color: var(--global-lightblack-color);
 }
 
 .social-links-list {
@@ -669,7 +649,7 @@ img {
 .social-link:hover,
 .social-link:focus {
     color: var(--global-white-color);
-    background-color: var(--social-clients-links-hover-color);
+    background-color: var(--global-sky-color);
 }
 
 .company-clients-list {
@@ -705,9 +685,9 @@ img {
 
 .client-link:hover,
 .client-link:focus {
-    color: var(--social-clients-links-hover-color);
+    color: var(--global-sky-color);
     background-color: var(--global-white-color);
-    border: 1px solid var(--social-clients-links-hover-color);
+    border: 1px solid var(--global-sky-color);
 }
 
 /* hide h1, h2 */
@@ -746,18 +726,18 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     cursor: pointer;
-    color: var(--projects-filter-button-text-color);
+    color: var(--global-blackgray-color);
     border: none;
     border-radius: 4px;
     /* css перехід */
-    transition-property: background, color, box-shadow;
+    transition-property: background-color, color, box-shadow;
     transition-duration: var(--global-transition-duration);
     transition-timing-function: var(--global-transition-timing-function);
 }
 
 .projects-filter-button:hover,
 .projects-filter-button:focus {
-    background: var(--projects-filter-button-hover-background-color);
+    background-color: var(--global-sky-color);
     color: var(--global-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -779,7 +759,7 @@ img {
 .project-link {
     display: inline-block;
     text-decoration: none;
-    color: var(--projects-link-color);
+    color: var(--global-blackgray-color);
     /* css перехід */
     transition-property: box-shadow;
     transition-duration: var(--global-transition-duration);
@@ -791,46 +771,6 @@ img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-/*############### Start Projects description animation #################*/
-/* Цей спосіб працює і відображає приховане без переходу з "виїжджанням"  */
-/* .project-description-container {
-    position: relative;
-}
-
-.project-description-container::before {
-    display: inline-block;
-    position: absolute;
-    content: '';
-}
-
-.project-description {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
-    padding: 63px 24px;
-    overflow: auto;
-    background: rgba(33, 150, 243, 0.9);
-    
-    transition-property: opacity;
-    transition-duration: var(--global-transition-duration);
-    transition-timing-function: var(--global-transition-timing-function);
-}
-
-.project-link:hover .project-description,
-.project-link:focus .project-description {
-    opacity: 1;
-}
-
-.project-description > p {
-    font-size: 18px;
-    line-height: calc(28 / 18);
-    color: var(--global-white-color);
-} */
-
-/*############### End Projects description animation #################*/
 
 /*############### Start Projects description animation #################*/
 
@@ -900,14 +840,14 @@ img {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--project-title-color);
+    color: var(--global-blackgray-color);
 }
 
 .project-type {
     font-style: normal;
     font-size: 16px;
     line-height: 1.875;
-    color: var(--projects-type-color);
+    color: var(--global-lightblack-color);
 }
 
 .project-content {
@@ -926,6 +866,7 @@ img {
     display: flex;
     align-items: baseline;
     align-content: center;
+    justify-content: space-between;
 }
 
 .footer-logo {
@@ -960,7 +901,7 @@ img {
 
 .footer-contact:hover,
 .footer-contact:focus {
-    color: var(--footer-contacts-hove-focus-color);
+    color: var(--global-sky-color);
 }
 
 .footer-social-title {
@@ -1009,11 +950,11 @@ img {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-    background-color: var(--social-clients-links-hover-color);
+    background-color: var(--global-sky-color);
 }
 
 .footer-subscribe-form-container {
-    width: 570px;
+    /* width: 570px; */
     margin-left: 93px;
 }
 
@@ -1041,6 +982,7 @@ img {
     width: 358px;
     height: 50px;
     padding: 15px 16px;
+    color: var(--global-white-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -1048,11 +990,12 @@ img {
 }
 
 .subscribe-form-button {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
+    width: 200px;
     padding: 10px 28px;
     margin-left: 12px;
     display: flex;
@@ -1061,7 +1004,7 @@ img {
     letter-spacing: 0.06em;
     color: var(--global-white-color);
     cursor: pointer;
-    background: #2196F3;
+    background: var(--global-sky-color);
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
