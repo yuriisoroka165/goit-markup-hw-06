@@ -320,6 +320,9 @@ img {
     width: 18px;
     height: 18px;
     fill: currentColor;
+    transition-property: fill;
+    transition-duration: var(--global-transition-duration);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .modal-close-button {
@@ -402,6 +405,9 @@ img {
     padding: 16px 12px;
     border: 1px solid var(--form-border-color);
     border-radius: 4px;
+    transition-property: border-color;
+    transition-duration: var(--global-transition-duration);
+    transition-timing-function: var(--global-transition-timing-function);
 }
 
 .form-textarea::placeholder {
@@ -987,6 +993,14 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background: transparent;
+    transition-property: border-color;
+    transition-duration: var(--global-transition-duration);
+    transition-timing-function: var(--global-transition-timing-function);
+}
+
+.subscribe-form-input:focus {
+    outline: none;
+    border-color: var(--global-white-color);
 }
 
 .subscribe-form-button {
