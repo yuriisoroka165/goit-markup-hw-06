@@ -400,6 +400,10 @@ img {
     transition-timing-function: var(--global-transition-timing-function);
 }
 
+.textarea-field {
+    margin-bottom: 20px;
+}
+
 .form-textarea {
     resize: none;
     padding: 16px 12px;
