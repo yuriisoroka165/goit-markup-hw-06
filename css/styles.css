@@ -964,8 +964,7 @@ img {
 }
 
 .footer-subscribe-form-container {
-    /* width: 570px; */
-    margin-left: 93px;
+    margin-left: auto;
 }
 
 .subscribe-form-label {
@@ -983,10 +982,10 @@ img {
     align-items: baseline;
 }
 
-.subscribe-form-field {
+/* .subscribe-form-field {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .subscribe-form-input {
     width: 358px;
